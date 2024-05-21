@@ -9,3 +9,5 @@ COPY index.html /app
 
 # Expose port 80
 EXPOSE 80
+
+CMD ["index.html", "nginx"]
