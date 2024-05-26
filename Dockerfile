@@ -1,13 +1,14 @@
-# Use the official Nginx image as the base image
+# Use an official nginx image as the base image
 FROM nginx:alpine
 
-# Set the working directory to the default Nginx HTML directory
-WORKDIR /app
+# Set the working directory to /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
-# Copy the index.html to the working directory
-COPY index.html /app
+# Copy the HTML file(s) to the working directory
+COPY index.html .
 
 # Expose port 80
 EXPOSE 80
 
+# Command to run Nginx server in the foreground
 CMD ["nginx", "-g", "daemon off;"]
