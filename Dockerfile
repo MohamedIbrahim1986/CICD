@@ -10,4 +10,4 @@ COPY index.html /app
 # Expose port 80
 EXPOSE 80
 
-CMD ["ngnix", "-g", "deamon off;",]
+CMD ["ngnix", "-g", "deamon off;"]
